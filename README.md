@@ -13,7 +13,7 @@ Applicazione web che permette di acquistare e vendere bitcoin.
 ## Framework e Tecnologie usate:
 - [Django](https://docs.djangoproject.com/it/4.0/) - Back-end
 - [Bootstrap](https://getbootstrap.com/docs/5.1/getting-started/introduction/) - Front-end
-- [MongoDB]([https://redis.io](https://www.mongodb.com)) - Server
+- [MongoDB]([https://redis.io](https://www.mongodb.com) - Server
 
 ## Setup progetto:
 ```
