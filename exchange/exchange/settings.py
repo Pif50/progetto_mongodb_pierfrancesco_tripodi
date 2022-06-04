@@ -38,12 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #My app installed:
+    #App Installate con il comando: python manage.py starapp NOME_APPLICAZIONE
     'app',
     'accounts',
 
-    'crispy_forms',
-    'crispy_bootstrap5',
+    'crispy_forms', #pip install django-crispy-forms. Già aggiunto nei requirments.txt
+    'crispy_bootstrap5', #pip install crispy-bootstrap5. Già aggiunto nei requirments.txt
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap5"
