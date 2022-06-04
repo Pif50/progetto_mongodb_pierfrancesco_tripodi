@@ -17,13 +17,13 @@ Applicazione web che permette di acquistare e vendere bitcoin.
 
 ## Setup progetto:
 ```
-progetto_dango_pierfrancesco_tripodi % python3 -m venv myvenv(=nome ambiente virtuale)
-progetto_dango_pierfrancesco_tripodi % source venv/bin/activate
+progetto_mongodb_pierfrancesco_tripodi % python3 -m venv myvenv(=nome ambiente virtuale)
+progetto_mongodb_pierfrancesco_tripodi % source venv/bin/activate
 (venv)progetto_dango_pierfrancesco_tripodi % pip install -r requirements.txt
 ```
 
 ## Avvio del progetto: 
 ```
-progetto_dango_pierfrancesco_tripodi % cd social_dex
-social_dex % python manage.py runserver
+progetto_dango_pierfrancesco_tripodi % cd exchange
+exchange % python manage.py runserver
 ```
