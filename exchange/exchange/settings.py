@@ -89,7 +89,13 @@ WSGI_APPLICATION = 'exchange.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
-        'NAME': os.path.join('engine'),
+        "CLIENT": {
+           "name": 'sampleDB',
+           "host": 'mongodb+srv://Cozza:Cozzagamer12<<<@cluster0.sseoq.mongodb.net/?retryWrites=true&w=majority',
+           "username": 'Cozza',
+           "password": 'Cozzagamer12<<<',
+           "authMechanism": "SCRAM-SHA-1",
+        }, 
     }
 }
 
