@@ -8,6 +8,7 @@ from django.db.models import Q
 from django.contrib.auth.decorators import login_required
 from django.views.generic import ListView
 from django.http import JsonResponse
+from django.shortcuts import render
 
 def homepage(request):
 
@@ -141,11 +142,9 @@ def nuovo_ordine(request):
                         else:
                             return redirect('/nuovo_ordine')
                     else:
-                        messages.info(request, 'Nessuna controparte')
-                        return redirect('/nuovo_ordine')
+                        return render(request, 'nessuna_controparte.html')
                 else:
-                    messages.error(request, 'BTC Insufficienti!')
-                    return redirect('/nuovo_ordine')
+                    return render(request, 'btc_insufficiente.html')
         else:
             messages.error(request, "Inserisci quantita' o prezzo corretti!")
             return redirect('/nuovo_ordine')

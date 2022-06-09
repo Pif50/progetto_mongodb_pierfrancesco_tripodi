@@ -5,7 +5,10 @@
         <form method="POST">
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Nuovo_ordine</legend>
+                <legend class="border-bottom mb-4">
+                    <h1>Effettua il tuo ordine qui di seguito</h1>
+                    <h3>Scegli se vendere o compra Bitcoin con il menù a tendina.</h3>
+                </legend>
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
