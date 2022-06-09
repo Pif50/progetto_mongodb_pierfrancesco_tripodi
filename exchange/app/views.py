@@ -52,8 +52,7 @@ def nuovo_ordine(request):
                                 new_order_prof.save()
                                 form.save()
                                 prof_sell.save()
-                                messages.success(request, 'BTC acquistati')
-                                return redirect('/nuovo_ordine')
+                                return render(request, 'btc_messi_mercato.html')
                             elif order.quantity < form.instance.quantity:
                                 form.instance.quantity -= order.quantity
                                 prof_sell.btc_wallet -= order.quantity
@@ -78,8 +77,7 @@ def nuovo_ordine(request):
                                 new_order_prof.save()
                                 form.save()
                                 prof_sell.save()
-                                messages.success(request, 'BTC acquistati')
-                                return redirect('/nuovo_ordine')
+                                return render(request, 'nessuna_controparte.html')
                             else:
                                 return redirect('/nuovo_ordine')
                     else:
@@ -111,8 +109,7 @@ def nuovo_ordine(request):
                                 new_order_prof.save()
                                 form.save()
                                 prof_buyer.save()
-                                messages.success(request, 'BTC venduti')
-                                return redirect('/nuovo_ordine')
+                                return render(request, 'btc_messi_mercato.html')
                             elif order.quantity < form.instance.quantity:
                                 form.instance.quantity -= order.quantity
                                 prof_buyer.btc_wallet += order.quantity
@@ -137,12 +134,11 @@ def nuovo_ordine(request):
                                 new_order_prof.save()
                                 form.save()
                                 prof_buyer.save()
-                                messages.success(request, 'BTC venduti')
-                                return redirect('/nuovo_ordine')
+                                return render(request, 'btc_venduti.html')
                         else:
                             return redirect('/nuovo_ordine')
                     else:
-                        return render(request, 'nessuna_controparte.html')
+                        return render(request, 'btc_messi_mercato.html')
                 else:
                     return render(request, 'btc_insufficiente.html')
         else:
