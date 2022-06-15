@@ -52,7 +52,7 @@ def nuovo_ordine(request):
                                 new_order_prof.save()
                                 form.save()
                                 prof_sell.save()
-                                return render(request, 'btc_messi_mercato.html')
+                                return render(request, 'btc_venduti.html')
                             elif order.quantity < form.instance.quantity:
                                 form.instance.quantity -= order.quantity
                                 prof_sell.btc_wallet -= order.quantity
@@ -64,8 +64,7 @@ def nuovo_ordine(request):
                                 new_order_prof.save()
                                 form.save()
                                 prof_sell.save()
-                                messages.success(request, 'BTC acquistati parzialmente')
-                                continue
+                                return render(request, 'nessuna_controparte.html')
                             elif order.quantity > form.instance.quantity:
                                 order.quantity -= form.instance.quantity
                                 prof_sell.btc_wallet -= form.instance.quantity
@@ -81,8 +80,7 @@ def nuovo_ordine(request):
                             else:
                                 return redirect('/nuovo_ordine')
                     else:
-                        messages.info(request, 'Nessuna controparte')
-                        return redirect('/nuovo_ordine')
+                        return render(request, 'btc_messi_mercato.html')
                 else:
                     messages.error(request, 'BTC Insufficienti!!')
                     return redirect('/nuovo_ordine')
