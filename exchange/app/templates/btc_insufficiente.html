@@ -1,1 +1,13 @@
-<h1>Non hai abbastanza btc...</h1>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}{{ block.super }} - Bitcoin Acquistati {% endblock head_title %}
+
+{% block content%}
+<body>
+    <div class="row justify-content-center mt-4 text-center">
+      <h3>Mi dispiace ma non hai abbastanza Bitcoin.</h3>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,1 +1,14 @@
-I tuoi btc sono stati comprati parz
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}{{ block.super }} - Bitcoin Acquistati {% endblock head_title %}
+
+{% block content%}
+<body>
+    <div class="row justify-content-center mt-4 text-center">
+      <h2>Hai acquistato parzialmente i Bitcoin che hai messo in ordine. 
+        <br> Per acquistarli tutti aspetta che ci sia un ordine in vendita che soddisfi la parte rimanente del tuo ordine.</h2>
+    </div>
+</body>
+
+{% endblock %}

@@ -1,1 +1,14 @@
-Btc venduti
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}{{ block.super }} - Bitcoin Acquistati {% endblock head_title %}
+
+{% block content%}
+<body>
+    <div class="row justify-content-center mt-4 text-center">
+      <h2>Bitcoin venduti con sucesso!</h2>
+      <h4>Per andare al <a href="{% url 'wallet' %}">Wallet.</a></h4>
+    </div>
+</body>
+
+{% endblock %}

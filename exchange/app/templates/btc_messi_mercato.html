@@ -1,2 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}{{ block.super }} - Bitcoin Acquistati {% endblock head_title %}
+
+{% block content%}
+<body>
+    <div class="row justify-content-center mt-4 text-center">
+      <h2>Ciao purtroppo al momento non ci sono ordini che corrispondono al tuo. 
+          <br> Abbiamo messo online il tuo ordine.
+        <br>Lo puoi trovare nella <a href="{% url 'all-order' %}">lista ordini.</a></h2>
+      
+    </div>
+</body>
+
+{% endblock %}
+
 <h1>Ciao purtroppo al momento non ci sono ordini che corrispondono al tuo. 
 Quindi abbiamo messo online il tuo ordine!</h1>

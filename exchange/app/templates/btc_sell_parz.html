@@ -1,1 +1,15 @@
-I tuoi btc sono stati venduti parzialmente. 
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head_title %}{{ block.super }} - Bitcoin Acquistati {% endblock head_title %}
+
+{% block content%}
+<body>
+    <div class="row justify-content-center mt-4 text-center">
+      <h2>Hai venduto parzialmente i Bitcoin che hai messo in ordine.
+        <br>Per venderli tutti aspetta che ci sia un ordine in acquisto che soddisfi la parte rimanente del tuo ordine.
+      </h2>
+    </div>
+</body>
+
+{% endblock %}

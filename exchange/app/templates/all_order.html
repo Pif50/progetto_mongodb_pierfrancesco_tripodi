@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
-    <h1 class="text-center">Orders Active - BUY</h1>
+    <h1 class="text-center">Ordini all'attivo in acquisto.</h1>
     {% for order in orders %}
         {% if order.active == True%}
             {% if order.type == 'BUY' %}
@@ -26,7 +26,7 @@
         {%endif%}
     {% endfor %}
 
-    <h1 class="text-center">Orders Active - SELL</h1>
+    <h1 class="text-center">Ordini all'attivo in vendita.</h1>
      {% for order in orders %}
         {% if order.active == True%}
             {% if order.type == 'SELL' %}
